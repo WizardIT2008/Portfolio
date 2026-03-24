@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  color: #38bdf8;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 8%;
+  min-height: 90vh;
+}
+
+/* 🔥 วงกลมรูป */
+.hero-left {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* วงกลมแดง */
+.circle-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #38bdf8, #00c8ff);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(20px);
+}
+
+/* รูป */
+.hero-left img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  z-index: 2;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+/* hover */
+.hero-left img:hover {
+  transform: scale(1.05);
+}
+
+/* RIGHT */
+.hero-right {
+  max-width: 500px;
+}
+
+.hero-right h1 {
+  font-size: 40px;
+}
+
+.hero-right h1 span {
+  color: #38bdf8;
+}
+
+.hero-right h2 {
+  margin: 10px 0;
+}
+
+.hero-right h2 span {
+  color: #38bdf8;
+}
+
+.hero-right p {
+  margin: 15px 0;
+  color: #aaa;
+}
+
+.socials a {
+  margin-right: 10px;
+  border: 1px solid #38bdf8;
+  padding: 8px 10px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid #38bdf8;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #38bdf8;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 15px;
+    display: block;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+  }
+}
+
+.skills-page {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.skills-page h1 {
+  font-size: 40px;
+  color: #00aaff;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill p {
+  margin-bottom: 5px;
+}
+
+/* progress bar */
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #00aaff, #0077ff);
+  border-radius: 10px;
+  transition: 1s;
+}
+
+/* ABOUT */
+.about {
+  padding: 80px 8%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* รูป */
+.about-left img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* ข้อมูล */
+.about-right {
+  max-width: 500px;
+}
+
+.about-right h1 {
+  font-size: 40px;
+  color: #38bdf8;
+}
+
+.about-right h2 {
+  margin: 10px 0;
+  color: #00aaff;
+}
+
+.about-right p {
+  margin: 15px 0;
+  color: #aaa;
+}
+
+.about-info p {
+  margin: 5px 0;
+}
+
+.about-right button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid #38bdf8;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.about-right button:hover {
+  background: #00c8ff;
+}
+
+/* ABOUT */
+.about {
+  padding: 80px 8%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* รูป */
+.about-left img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* ข้อมูล */
+.about-right {
+  max-width: 500px;
+}
+
+.about-right h1 {
+  font-size: 40px;
+  color: #00c8ff;
+}
+
+.about-right h2 {
+  margin: 10px 0;
+  color: #00aaff;
+}
+
+.about-right p {
+  margin: 15px 0;
+  color: #aaa;
+}
+
+.about-info p {
+  margin: 5px 0;
+}
+
+.about-right button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid #38bdf8;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.about-right button:hover {
+  background: #00c8ff;
+}
+
+.projects {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: 40px;
+  color: #00aaff;
+  margin-bottom: 40px;
+}
+
+/* grid */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* card */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* overlay */
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  transform: translateY(100%);
+  transition: 0.4s;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card:hover .project-info {
+  transform: translateY(0);
+}
+
+.project-info h3 {
+  color: #00aaff;
+}
+
+.project-info p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.project-info a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 40px;
+  color: #00aaff;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #111;
+  color: white;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #00aaff;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #00aaff;
+}
+
+/* info */
+.contact-info {
+  text-align: left;
+  color: #aaa;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
