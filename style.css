@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #000;
+  background: #050d1a;
   color: #fff;
 }
 
@@ -56,13 +56,14 @@ nav a:hover {
 .hero-left {
   position: relative;
   width: 350px;
-  height: 350px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  box-shadow: 0 0 20px #38bdf8;
 }
 
 /* วงกลมแดง */
@@ -73,7 +74,7 @@ nav a:hover {
   background: radial-gradient(circle, #38bdf8, #00c8ff);
   border-radius: 50%;
   z-index: 1;
-  filter: blur(20px);
+  filter: blur(30px);
 }
 
 /* รูป */
@@ -237,6 +238,7 @@ button:hover {
   width: 300px;
   border-radius: 20px;
   box-shadow: 0 0 20px #00aaff;
+
 }
 
 /* ข้อมูล */
@@ -291,9 +293,17 @@ button:hover {
 
 /* รูป */
 .about-left img {
-  width: 300px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #00aaff;
+  width: 350px;
+  aspect-ratio: 1/1;
+  object-fit: cover;      /* ครอปรูปให้พอดี */
+  border-radius: 50%;     /* 🔥 ทำให้เป็นวงกลม */
+  box-shadow: 0 0 20px #38bdf8;
+  transition: 0.3s;
+}
+
+.about-left img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #0077ff;
 }
 
 /* ข้อมูล */
@@ -332,6 +342,17 @@ button:hover {
 
 .about-right button:hover {
   background: #00c8ff;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* 🔥 ให้ลงล่าง */
+    text-align: center;
+  }
+
+  .about-left img {
+    width: 200px;
+  }
 }
 
 .projects {
